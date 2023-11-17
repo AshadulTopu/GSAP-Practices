@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+.div1,
+.div2 {
+  height: 100vh;
+}
+.div1 {
+  background: pink;
+}
+.div2 {
+  background: salmon;
+}
+.square {
+  width: 150px;
+  height: 150px;
+  background: blue;
+}
+.topu{
+  background: red;
+}
