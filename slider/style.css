@@ -1,0 +1,97 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#main {
+  display: flex;
+}
+h1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.buttons button {
+  background: none;
+  border: 2px solid slateblue;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+button:hover {
+  background: slateblue;
+}
+
+#main .part {
+  flex: 1;
+}
+#main .part .section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#main .part .section img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: var(--x);
+  pointer-events: none;
+}
+
+.cursor {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 1000;
+  background: #fff;
+}
+.cursor-fill {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 1000;
+  background: slateblue;
+  opacity: 0.5;
+}
